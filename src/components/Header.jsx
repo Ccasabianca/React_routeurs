@@ -32,17 +32,3 @@ function Header() {
 }
 
 export default Header;
-
-function SearchHeader() {
-  // Vérifie si l'URL correspond au pattern "/search/:query"
-  const match = useMatch("/search/:query");
-  return (
-    <header>
-      {match ? (
-        <h2>Résultats pour : {match.params.query}</h2>
-      ) : (
-        <h2>Bienvenue sur le site</h2>
-      )}
-    </header>
-  );
-}
