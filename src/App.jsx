@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import Category from "./pages/Category.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Layout from "./components/Layout.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
