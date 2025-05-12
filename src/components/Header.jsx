@@ -1,14 +1,18 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { NavLink } from "react-router";
+import { NavLink, useMatch } from "react-router";
 import "../assets/Header.css";
 
 function Header() {
+    const match = useMatch("/category/:query");
   return (
     <header>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            {match ? (
+              <h2>Catégorie : {match.params.query}</h2>
+            ) :  null }
             <Nav className="ms-auto">
               <Nav.Link as={NavLink} to="/">
                 Accueil
@@ -28,3 +32,17 @@ function Header() {
 }
 
 export default Header;
+
+function SearchHeader() {
+  // Vérifie si l'URL correspond au pattern "/search/:query"
+  const match = useMatch("/search/:query");
+  return (
+    <header>
+      {match ? (
+        <h2>Résultats pour : {match.params.query}</h2>
+      ) : (
+        <h2>Bienvenue sur le site</h2>
+      )}
+    </header>
+  );
+}
