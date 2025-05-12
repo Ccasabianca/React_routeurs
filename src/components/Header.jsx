@@ -13,10 +13,10 @@ function Header() {
               <Nav.Link as={NavLink} to="/">
                 Accueil
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/Vetements">
+              <Nav.Link as={NavLink} to="/category/vetements">
                 Vêtements
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/Chaussures">
+              <Nav.Link as={NavLink} to="/category/chaussures">
                 Chaussures
               </Nav.Link>
             </Nav>
